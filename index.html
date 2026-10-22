@@ -1,0 +1,1611 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0a111b" />
+  <meta name="description"
+    content="S & F Engineering, Daman — precision injection moulding and blow moulding dies, new mould development, maintenance and repair work." />
+  <title>S & F Engineering | Precision Dies & Moulds</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #08111c;
+      --panel: #101d2b;
+      --panel2: #142435;
+      --ink: #f4f7fb;
+      --muted: #a8b6c5;
+      --line: rgba(220, 235, 248, 0.13);
+      --blue: #64c9ff;
+      --blue2: #168bd0;
+      --gold: #f1b75b;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img,
+    video {
+      display: block;
+      max-width: 100%;
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+    .wrap {
+      width: min(var(--max), calc(100% - 44px));
+      margin: auto;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--blue);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.17em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow:before {
+      content: "";
+      width: 27px;
+      height: 2px;
+      background: var(--gold);
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: Manrope, sans-serif;
+      line-height: 1.12;
+      letter-spacing: -0.035em;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: clamp(2.7rem, 6vw, 5.6rem);
+      max-width: 800px;
+      font-weight: 800;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3.45rem);
+      font-weight: 800;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+    }
+
+    .section {
+      padding: 100px 0;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 32px;
+      align-items: end;
+      margin-bottom: 42px;
+    }
+
+    .section-head p {
+      max-width: 460px;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 20px;
+      border: 1px solid transparent;
+      border-radius: 5px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      transition: 0.25s;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--blue);
+      color: #07121d;
+    }
+
+    .btn-primary:hover {
+      background: #a5e2ff;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border-color: rgba(255, 255, 255, 0.28);
+      color: white;
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+
+    .topbar {
+      background: #050b12;
+      border-bottom: 1px solid var(--line);
+      font-size: 0.78rem;
+      color: #b8c6d3;
+    }
+
+    .topbar .wrap {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 9px 0;
+    }
+
+    .topbar span {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      background: rgba(8, 17, 28, 0.9);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 210px;
+    }
+
+    .brand-mark {
+      width: 43px;
+      height: 43px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(100, 201, 255, 0.55);
+      color: var(--blue);
+      font-family: Manrope;
+      font-weight: 800;
+      font-size: 0.92rem;
+      position: relative;
+    }
+
+    .brand-mark:after {
+      content: "";
+      position: absolute;
+      right: -5px;
+      bottom: -5px;
+      width: 13px;
+      height: 13px;
+      border-right: 2px solid var(--gold);
+      border-bottom: 2px solid var(--gold);
+    }
+
+    .brand-name {
+      font: 800 1rem Manrope;
+      letter-spacing: 0.02em;
+    }
+
+    .brand-sub {
+      display: block;
+      color: var(--muted);
+      font-size: 0.63rem;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      font-size: 0.86rem;
+      color: #d3dce6;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+
+    .nav-cta {
+      padding: 11px 15px;
+      font-size: 0.82rem;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--line);
+      color: white;
+      border-radius: 4px;
+      padding: 9px 12px;
+    }
+
+    .hero {
+      min-height: 690px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-media {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background: #0b1724;
+    }
+
+    .hero-media video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.4;
+      filter: saturate(0.7);
+    }
+
+    .hero-media:after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg,
+          rgba(5, 12, 20, 0.98) 0%,
+          rgba(5, 12, 20, 0.83) 46%,
+          rgba(5, 12, 20, 0.25) 100%),
+        linear-gradient(0deg, #08111c 0%, transparent 45%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 90px 0 105px;
+    }
+
+    .hero h1 {
+      margin: 22px 0 22px;
+    }
+
+    .hero h1 span {
+      color: var(--blue);
+    }
+
+    .hero-copy {
+      font-size: 1.08rem;
+      max-width: 640px;
+      color: #c4d0dc;
+      margin: 0 0 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-proof {
+      display: flex;
+      gap: 26px;
+      flex-wrap: wrap;
+      margin-top: 48px;
+      padding-top: 23px;
+      border-top: 1px solid rgba(255, 255, 255, 0.17);
+      max-width: 710px;
+    }
+
+    .proof-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #d5e0e9;
+      font-size: 0.84rem;
+    }
+
+    .proof-icon {
+      display: grid;
+      place-items: center;
+      width: 29px;
+      height: 29px;
+      border: 1px solid rgba(100, 201, 255, 0.45);
+      color: var(--blue);
+      border-radius: 50%;
+      font-size: 0.8rem;
+    }
+
+    .hero-tag {
+      position: absolute;
+      right: 5%;
+      bottom: 65px;
+      z-index: 2;
+      border-left: 2px solid var(--gold);
+      padding: 9px 0 9px 17px;
+      color: #d9e1e9;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .hero-tag strong {
+      display: block;
+      color: white;
+      font-size: 1rem;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    .ticker {
+      border-bottom: 1px solid var(--line);
+      background: #0b1724;
+    }
+
+    .ticker .wrap {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 20px 0;
+      flex-wrap: wrap;
+    }
+
+    .ticker span {
+      font-size: 0.76rem;
+      color: #bdc9d5;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .ticker b {
+      color: var(--blue);
+      font-size: 1rem;
+      margin-right: 8px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-visual {
+      position: relative;
+      min-height: 490px;
+    }
+
+    .about-visual img {
+      position: absolute;
+      object-fit: cover;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+    }
+
+    .about-visual .img-main {
+      width: 78%;
+      height: 390px;
+      left: 0;
+      top: 0;
+    }
+
+    .about-visual .img-small {
+      width: 48%;
+      height: 225px;
+      right: 0;
+      bottom: 0;
+      border: 8px solid var(--bg);
+    }
+
+    .visual-label {
+      position: absolute;
+      left: 20px;
+      bottom: 35px;
+      background: var(--blue);
+      color: #06111b;
+      padding: 13px 16px;
+      font: 800 0.78rem Manrope;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    .about-copy p {
+      color: var(--muted);
+      margin: 20px 0;
+    }
+
+    .checklist {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 13px 20px;
+      margin: 27px 0 30px;
+    }
+
+    .check {
+      display: flex;
+      gap: 10px;
+      color: #e1e9f0;
+      font-size: 0.91rem;
+    }
+
+    .check i {
+      font-style: normal;
+      color: var(--gold);
+      font-weight: 800;
+    }
+
+    .services {
+      background: linear-gradient(180deg, #0b1724, #09121e);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .service-card {
+      padding: 28px;
+      background: linear-gradient(145deg,
+          rgba(21, 39, 57, 0.95),
+          rgba(12, 25, 38, 0.95));
+      border: 1px solid var(--line);
+      min-height: 245px;
+      transition: 0.25s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(100, 201, 255, 0.55);
+    }
+
+    .service-no {
+      color: var(--gold);
+      font: 700 0.78rem Manrope;
+      letter-spacing: 0.1em;
+    }
+
+    .service-icon {
+      width: 46px;
+      height: 46px;
+      border: 1px solid rgba(100, 201, 255, 0.38);
+      display: grid;
+      place-items: center;
+      color: var(--blue);
+      font-size: 1.25rem;
+      margin: 20px 0;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 0.91rem;
+      margin: 13px 0 0;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      background: #132131;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      min-width: 0;
+      min-height: 230px;
+    }
+
+    .gallery-item:nth-child(1),
+    .gallery-item:nth-child(4) {
+      grid-column: span 7;
+    }
+
+    .gallery-item:nth-child(2),
+    .gallery-item:nth-child(3) {
+      grid-column: span 5;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      min-height: 230px;
+      object-fit: cover;
+      transition: transform 0.5s;
+      opacity: 0.88;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.04);
+      opacity: 1;
+    }
+
+    .gallery-caption {
+      position: absolute;
+      inset: auto 0 0;
+      padding: 45px 18px 16px;
+      background: linear-gradient(transparent, rgba(3, 8, 13, 0.92));
+      font: 700 0.94rem Manrope;
+    }
+
+    .gallery-caption small {
+      display: block;
+      color: #c1cfdb;
+      font: 400 0.76rem "DM Sans";
+      margin-top: 4px;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .process {
+      border-top: 1px solid rgba(100, 201, 255, 0.45);
+      padding-top: 20px;
+    }
+
+    .process .num {
+      font: 800 2rem Manrope;
+      color: var(--blue);
+      opacity: 0.9;
+    }
+
+    .process h3 {
+      margin: 13px 0;
+    }
+
+    .process p {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    .cta-band {
+      background: linear-gradient(110deg, #10283b, #0c1b2a);
+      border: 1px solid rgba(100, 201, 255, 0.25);
+      padding: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .cta-band p {
+      color: var(--muted);
+      margin: 12px 0 0;
+      max-width: 600px;
+    }
+
+    .contact-section {
+      background: #060d15;
+      border-top: 1px solid var(--line);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 55px;
+    }
+
+    .contact-info p {
+      color: var(--muted);
+    }
+
+    .contact-list {
+      margin-top: 30px;
+      display: grid;
+      gap: 20px;
+    }
+
+    .contact-row {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .contact-symbol {
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--line);
+      color: var(--blue);
+      flex-shrink: 0;
+    }
+
+    .contact-row small {
+      display: block;
+      color: #8ea0b1;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 0.68rem;
+      margin-bottom: 4px;
+    }
+
+    .contact-row strong {
+      font-size: 0.94rem;
+      font-weight: 600;
+    }
+
+    .contact-form {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      padding: 30px;
+      border-radius: 5px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      margin-bottom: 15px;
+    }
+
+    .field label {
+      font-size: 0.8rem;
+      color: #c4d1dd;
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      background: #091521;
+      border: 1px solid rgba(220, 235, 248, 0.16);
+      color: white;
+      padding: 13px 14px;
+      border-radius: 3px;
+      outline: none;
+    }
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      border-color: var(--blue);
+    }
+
+    .field textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-note {
+      color: #91a4b6;
+      font-size: 0.75rem;
+      margin: 12px 0 0;
+    }
+
+    .map-frame {
+      width: 100%;
+      height: 260px;
+      border: 0;
+      filter: grayscale(0.75) invert(0.9) contrast(0.85);
+      opacity: 0.8;
+      margin-top: 35px;
+    }
+
+    .footer {
+      padding: 24px 0;
+      color: #8ea0b1;
+      font-size: 0.78rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .footer .wrap {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .footer strong {
+      color: #dce6ef;
+    }
+
+    .floating-wa {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 35;
+      background: #21c36b;
+      color: #fff;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 1.3rem;
+      box-shadow: 0 8px 28px #0008;
+      transition: 0.2s;
+    }
+
+    .floating-wa:hover {
+      transform: translateY(-3px);
+    }
+
+    .mobile-only {
+      display: none;
+    }
+
+    /* Give the 3 newly added product images proper width */
+    .gallery-item:nth-child(n) {
+      height: 360px;
+      min-height: 360px;
+    }
+
+    .gallery-item:nth-child(1),
+    .gallery-item:nth-child(4),
+    .gallery-item:nth-child(8),
+    .gallery-item:nth-child(11) {
+      grid-column: span 7;
+    }
+
+    .gallery-item:nth-child(2),
+    .gallery-item:nth-child(3),
+    .gallery-item:nth-child(9),
+    .gallery-item:nth-child(10) {
+      grid-column: span 5;
+    }
+
+    .gallery-item:nth-child(n + 5):nth-child(-n + 7) {
+      grid-column: span 4;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      min-height: 0;
+      object-fit: cover;
+    }
+
+    .gallery-note {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin: 24px 0 0;
+    }
+
+    @media (max-width: 900px) {
+      .nav-links {
+        gap: 14px;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .about-visual {
+        min-height: 430px;
+      }
+
+      .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero-tag {
+        display: none;
+      }
+
+      .section {
+        padding: 78px 0;
+      }
+
+      .section-head {
+        align-items: start;
+        flex-direction: column;
+      }
+
+      .ticker .wrap {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .wrap {
+        width: min(var(--max), calc(100% - 30px));
+      }
+
+      .topbar .wrap {
+        font-size: 0.68rem;
+      }
+
+      .topbar .top-extra {
+        display: none;
+      }
+
+      .nav-inner {
+        height: 70px;
+      }
+
+      .brand {
+        min-width: 0;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: #091521;
+        border-bottom: 1px solid var(--line);
+        padding: 18px 22px 24px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 12px 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .nav-links a:last-child {
+        border-bottom: 0;
+      }
+
+      .hero {
+        min-height: 640px;
+      }
+
+      .hero-content {
+        padding: 76px 0 80px;
+      }
+
+      .hero-copy {
+        font-size: 1rem;
+      }
+
+      .hero-proof {
+        gap: 15px;
+      }
+
+      .proof-item {
+        font-size: 0.76rem;
+      }
+
+      .ticker .wrap {
+        gap: 12px 20px;
+      }
+
+      .ticker span {
+        font-size: 0.68rem;
+      }
+
+      .about-visual {
+        min-height: 340px;
+      }
+
+      .about-visual .img-main {
+        height: 285px;
+        width: 82%;
+      }
+
+      .about-visual .img-small {
+        height: 165px;
+        width: 50%;
+      }
+
+      .visual-label {
+        bottom: 16px;
+        font-size: 0.65rem;
+      }
+
+      .checklist {
+        grid-template-columns: 1fr;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-card {
+        min-height: 0;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .gallery-item,
+      .gallery-item:nth-child(n) {
+        grid-column: span 1;
+        height: 260px;
+        min-height: 260px;
+      }
+
+      .gallery-item:nth-child(n + 5):nth-child(-n + 7) {
+        grid-column: span 1;
+      }
+
+      .gallery-item:first-child {
+        grid-column: span 1;
+      }
+
+      .gallery-item img {
+        height: 100%;
+        min-height: 0;
+      }
+
+      .gallery-caption {
+        padding: 35px 12px 12px;
+        font-size: 0.78rem;
+      }
+
+      .gallery-caption small {
+        font-size: 0.68rem;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 26px 16px;
+      }
+
+      .cta-band {
+        padding: 28px;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .contact-form {
+        padding: 20px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .section {
+        padding: 65px 0;
+      }
+
+      .footer .wrap {
+        flex-direction: column;
+      }
+
+      .floating-wa {
+        right: 14px;
+        bottom: 14px;
+        width: 49px;
+        height: 49px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *:before,
+      *:after {
+        transition: none !important;
+        animation: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <span>⌖ Ringanwada, Daman · 396210</span><span class="top-extra">Precision tooling · New moulds · Maintenance &
+        repair</span><span>☎ <a href="tel:+919726357922">+91 97263 57922</a></span>
+    </div>
+  </div>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#home" aria-label="S and F Engineering home"><span
+          class="brand-mark">S&amp;F</span><span><span class="brand-name">S &amp; F ENGINEERING</span><span
+            class="brand-sub">Dies &amp; Moulds · Daman</span></span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+        ☰ Menu
+      </button>
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="#about">About</a><a href="#services">Services</a><a href="#work">Our Work</a><a href="#process">How We
+          Work</a><a href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn-primary nav-cta" href="#contact">Discuss a Project ↗</a>
+    </div>
+  </header>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-media">
+        <video autoplay muted loop playsinline poster="assets/shop-front-1.jpeg">
+          <source src="assets/storefront-intro.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="wrap hero-content">
+        <span class="eyebrow">Precision engineering · Daman, India</span>
+        <h1>Built for precision.<br /><span>Made for performance.</span></h1>
+        <p class="hero-copy">
+          Your manufacturing partner for precision injection moulding and blow
+          moulding dies — from new tool development to dependable maintenance
+          and repair.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">Request a Quote <span>↗</span></a><a class="btn btn-outline"
+            href="#work">Explore Our Work ↓</a>
+        </div>
+        <div class="hero-proof">
+          <div class="proof-item">
+            <span class="proof-icon">◇</span> Precision die &amp; mould work
+          </div>
+          <div class="proof-item">
+            <span class="proof-icon">↻</span> New &amp; maintenance work
+          </div>
+          <div class="proof-item">
+            <span class="proof-icon">⌖</span> Based in Daman
+          </div>
+        </div>
+      </div>
+      <div class="hero-tag">
+        Engineering solutions<strong>From concept to toolroom</strong>
+      </div>
+    </section>
+    <div class="ticker">
+      <div class="wrap">
+        <span><b>01</b> Injection moulding dies</span><span><b>02</b> Blow moulding dies</span><span><b>03</b> New mould
+          development</span><span><b>04</b> Maintenance &amp; repair</span>
+      </div>
+    </div>
+    <section class="section" id="about">
+      <div class="wrap about-grid">
+        <div class="about-visual">
+          <img class="img-main" src="assets/shop-front-2.jpeg" alt="S and F Engineering workshop entrance" /><img
+            class="img-small" src="assets/Rotation tap mould.jpeg" alt="Precision injection mould tool" />
+          <div class="visual-label">Engineering you can rely on</div>
+        </div>
+        <div class="about-copy">
+          <span class="eyebrow">About S &amp; F Engineering</span>
+          <h2>Practical expertise.<br />Precision in every detail.</h2>
+          <p>
+            S &amp; F Engineering specialises in die and mould solutions for
+            industrial manufacturing. We support customers with precision
+            injection and blow moulding die work, new tool development, and
+            maintenance work to help keep production dependable.
+          </p>
+          <p>
+            Whether you are developing a new component or need attention on an
+            existing mould, speak with our team to discuss the part,
+            application and tooling requirements.
+          </p>
+          <div class="checklist">
+            <div class="check"><i>✓</i> Injection moulding dies</div>
+            <div class="check"><i>✓</i> Blow moulding dies</div>
+            <div class="check"><i>✓</i> New die &amp; mould work</div>
+            <div class="check"><i>✓</i> Maintenance and repair</div>
+          </div>
+          <a class="btn btn-outline" href="#contact">Talk to our team ↗</a>
+        </div>
+      </div>
+    </section>
+    <section class="section services" id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">What we do</span>
+            <h2 style="margin-top: 17px">
+              Tooling solutions for<br />real production needs.
+            </h2>
+          </div>
+          <p>
+            Focused die and mould services for manufacturers who value fit,
+            function and reliable tool performance.
+          </p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card">
+            <span class="service-no">SERVICE / 01</span>
+            <div class="service-icon">▦</div>
+            <h3>Injection Moulding Dies</h3>
+            <p>
+              Precision die and mould work for plastic injection-moulded
+              components. Share your component details to discuss the right
+              tooling approach.
+            </p>
+          </article>
+          <article class="service-card">
+            <span class="service-no">SERVICE / 02</span>
+            <div class="service-icon">◉</div>
+            <h3>Blow Moulding Dies</h3>
+            <p>
+              Tooling support for blow-moulded products, with attention to
+              component shape, tooling requirements and practical
+              manufacturability.
+            </p>
+          </article>
+          <article class="service-card">
+            <span class="service-no">SERVICE / 03</span>
+            <div class="service-icon">⌘</div>
+            <h3>New Die Development</h3>
+            <p>
+              Support for new mould and die work, from reviewing the
+              application and part requirements to discussing a suitable
+              tooling solution.
+            </p>
+          </article>
+          <article class="service-card">
+            <span class="service-no">SERVICE / 04</span>
+            <div class="service-icon">↻</div>
+            <h3>Mould Maintenance</h3>
+            <p>
+              Maintenance work to help keep existing dies and moulds in
+              service and support ongoing production requirements.
+            </p>
+          </article>
+          <article class="service-card">
+            <span class="service-no">SERVICE / 05</span>
+            <div class="service-icon">⚒</div>
+            <h3>Repair &amp; Rectification</h3>
+            <p>
+              Discuss mould issues, wear or required rectification with us so
+              the job can be reviewed against the tooling condition.
+            </p>
+          </article>
+          <article class="service-card">
+            <span class="service-no">SERVICE / 06</span>
+            <div class="service-icon">◎</div>
+            <h3>Component &amp; Tooling Consultation</h3>
+            <p>
+              Talk through your component, production application, timelines
+              and tooling requirements directly with our team.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="work">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Workshop &amp; product gallery</span>
+            <h2 style="margin-top: 17px">A closer look at our work.</h2>
+          </div>
+          <p>
+            Workshop photographs, tooling references and sample components
+            shared by S &amp; F Engineering. Actual project details can be
+            discussed directly.
+          </p>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="assets/mould-design-1.jpeg" alt="CAD design of a mould tool" />
+            <div class="gallery-caption">
+              Mould design &amp; tooling<small>Tooling design reference</small>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/Rotation tap mould.jpeg" alt="Steel Mould" />
+            <div class="gallery-caption">
+              Rotation tap mould<small>Steel Mould </small>To make Plastic
+              Moulded Parts
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/moulded-components.jpeg" alt="White plastic moulded components" />
+            <div class="gallery-caption">
+              Moulded components<small>Sample plastic parts</small>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/injection-mould-tool.jpeg" alt="Precision metal injection mould tool" />
+            <div class="gallery-caption">
+              Precision mould tooling<small>Metal die assembly</small>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/product-box-1.png" alt="Exterior of the S and F Engineering workshop" />
+            <div class="gallery-caption">
+              Open Lid transition Box<small>Sample plastic parts</small>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/product-box-2.jpeg" alt="Exterior of the S and F Engineering workshop" />
+            <div class="gallery-caption">
+              Open Lid transition Box<small>Sample plastic parts</small>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/angle-batten-holder-ceiling-rose-set.png" alt="Angle batten holder and ceiling rose set" />
+            <div class="gallery-caption">
+              Angle Batten Holder &amp; Ceiling Rose Set<small>Sample electrical components</small>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/product-enclosure -1.png" alt="Industrial White Plastic Enclosure Showcase" />
+            <div class="gallery-caption">
+              Industrial White Plastic Enclosure Showcase<small>Sample plastic parts</small>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/end-cap-mould-design.jpeg" alt="CAD design of an end cap mould" />
+            <div class="gallery-caption">
+              End Cap Mould Design<small>Mould design reference</small>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/modular-set.jpeg" alt="Modular switch plate set" />
+            <div class="gallery-caption">
+              Modular Set<small>Sample plastic components</small>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/speaker-mould.jpeg" alt="CAD design of a speaker mould" />
+            <div class="gallery-caption">
+              Speaker Mould<small>Mould design reference</small>
+            </div>
+          </div>
+        </div>
+        <p class="gallery-note">More product are available.</p>
+      </div>
+    </section>
+    <section class="section services" id="process">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">A straightforward process</span>
+            <h2 style="margin-top: 17px">
+              From requirement to<br />tooling solution.
+            </h2>
+          </div>
+          <p>
+            Every job is different. These steps help us understand your
+            requirement and discuss the next move clearly.
+          </p>
+        </div>
+        <div class="process-grid">
+          <div class="process">
+            <div class="num">01</div>
+            <h3>Share your requirement</h3>
+            <p>
+              Tell us about the component, mould type, current issue or new
+              development requirement.
+            </p>
+          </div>
+          <div class="process">
+            <div class="num">02</div>
+            <h3>Review the details</h3>
+            <p>
+              We discuss available drawings, samples, specifications, tooling
+              condition and scope of work.
+            </p>
+          </div>
+          <div class="process">
+            <div class="num">03</div>
+            <h3>Discuss the solution</h3>
+            <p>
+              Align on the proposed work, practical considerations, expected
+              schedule and quotation.
+            </p>
+          </div>
+          <div class="process">
+            <div class="num">04</div>
+            <h3>Coordinate the job</h3>
+            <p>
+              Confirm the agreed scope and coordinate next steps directly with
+              the S &amp; F Engineering team.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="wrap">
+        <div class="cta-band">
+          <div>
+            <span class="eyebrow">Have a tooling requirement?</span>
+            <h2 style="margin-top: 15px">
+              Let's talk about your next project.
+            </h2>
+            <p>
+              Call us with your component or mould requirement. You can also
+              send details through the enquiry form.
+            </p>
+          </div>
+          <a class="btn btn-primary"
+            href="https://wa.me/919726357922?text=Hello%20S%20%26%20F%20Engineering%2C%20I%20would%20like%20to%20discuss%20a%20die%20and%20mould%20requirement."
+            target="_blank" rel="noopener">WhatsApp Us ↗</a>
+        </div>
+      </div>
+    </section>
+    <section class="section contact-section" id="contact">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Get in touch</span>
+            <h2 style="margin-top: 17px">Tell us what you need.</h2>
+          </div>
+          <p>
+            Contact S &amp; F Engineering for die and mould work, new
+            development, maintenance or repair enquiries.
+          </p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h3>Contact details</h3>
+            <p>
+              For a quicker discussion, call us or send a WhatsApp message.
+              For project enquiries, include your component details and any
+              available drawings or photographs.
+            </p>
+            <div class="contact-list">
+              <div class="contact-row">
+                <span class="contact-symbol">☎</span>
+                <div>
+                  <small>Phone / WhatsApp</small><strong><a href="tel:+919726357922">+91 97263
+                      57922</a></strong><br /><a href="tel:+919408958127">+91 94089 58127</a>
+                </div>
+              </div>
+              <div class="contact-row">
+                <span class="contact-symbol">✉</span>
+                <div>
+                  <small>Email</small>
+                  <strong>
+                    <a id="contactEmailLink" href="mailto:sfengineering22@gmail.com">sfengineering22@gmail.com</a>
+                  </strong>
+                </div>
+              </div>
+
+              <div class="contact-row">
+                <span class="contact-symbol">⌖</span>
+                <div>
+                  <small>Workshop address</small><strong>Gala No. 9, Keshwan Building, Sr. No.
+                    69/2,<br />Ringanwada–Kachigam,
+                    Daman, DNH &amp; DD 396210</strong><br /><a style="color: var(--blue); font-size: 0.82rem"
+                    href="https://www.google.com/maps/search/?api=1&query=Gala+No+9+Keshwan+Building+Sr+69%2F2+Ringanwada+Daman+396210"
+                    target="_blank" rel="noopener">Get directions ↗</a>
+                </div>
+              </div>
+              <div class="contact-row">
+                <span class="contact-symbol">◷</span>
+                <div>
+                  <small>Business enquiries</small><strong>Call to discuss availability and job requirements</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+          <form class="contact-form" id="enquiryForm">
+            <h3 style="margin-bottom: 22px">Project enquiry</h3>
+            <div class="form-row">
+              <div class="field">
+                <label for="name">Your name *</label><input id="name" name="name" required placeholder="Name" />
+              </div>
+              <div class="field">
+                <label for="company">Company</label><input id="company" name="company" placeholder="Company name" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="phone">Phone number *</label><input id="phone" name="phone" required type="tel"
+                  placeholder="+91" />
+              </div>
+              <div class="field">
+                <label for="service">Service required *</label><select id="service" name="service" required>
+                  <option value="">Choose a service</option>
+                  <option>Injection moulding die</option>
+                  <option>Blow moulding die</option>
+                  <option>New die / mould development</option>
+                  <option>Maintenance</option>
+                  <option>Repair / rectification</option>
+                  <option>Other tooling enquiry</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="message">Project details *</label><textarea id="message" name="message" required
+                placeholder="Tell us about the component, mould, issue or requirement..."></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">
+              Send enquiry via email ↗
+            </button>
+            <p class="form-note">
+              On desktop this opens a Gmail draft; on mobile it opens your
+              configured email app with the enquiry details filled in. No
+              information is stored on this website.
+            </p>
+          </form>
+        </div>
+        <iframe class="map-frame" title="Map showing the S and F Engineering area in Daman" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://maps.google.com/maps?q=Ringanwada%2C%20Daman%20396210&t=&z=14&ie=UTF8&iwloc=&output=embed"></iframe>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="wrap">
+      <div>
+        <strong>S &amp; F ENGINEERING</strong> · Dies &amp; Moulds · Daman,
+        India
+      </div>
+      <div>
+        © <span id="year"></span> S &amp; F Engineering. All rights reserved.
+      </div>
+      <div>Precision · Practicality · Partnership</div>
+    </div>
+  </footer>
+  <a class="floating-wa"
+    href="https://wa.me/919726357922?text=Hello%20S%20%26%20F%20Engineering%2C%20I%20have%20a%20die%20and%20mould%20enquiry."
+    target="_blank" rel="noopener" aria-label="Chat with S and F Engineering on WhatsApp"><svg aria-hidden="true"
+      viewBox="0 0 24 24" width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20.1 11.9a8.1 8.1 0 0 1-12 7.1L4 20l1.1-4A8.1 8.1 0 1 1 20.1 11.9Z" stroke="currentColor"
+        stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+      <path
+        d="M9 8.3c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.2 0 .4-.1.6l-.5.6c-.2.2-.2.4 0 .6.5.8 1.2 1.5 2 2 .2.1.4.1.6-.1l.7-.8c.2-.2.4-.2.6-.1l1.6.8c.3.1.4.3.4.5 0 .4-.2 1.1-.7 1.5-.5.5-1.2.7-1.9.6-1.1-.2-2.5-.9-3.8-2.1-1.1-1-2-2.3-2.3-3.4-.3-.9 0-1.7.5-2.2.3-.3.6-.5.9-.5Z"
+        fill="currentColor" />
+    </svg></a>
+  <script>
+    const enquiryForm = document.getElementById("enquiryForm");
+    const contactEmailLink = document.getElementById("contactEmailLink");
+
+    function isMobileDevice() {
+      return /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+    }
+
+    function buildEnquiryEmail() {
+      const data = new FormData(enquiryForm);
+      const name = String(data.get("name") || "").trim();
+      const company = String(data.get("company") || "").trim();
+      const phone = String(data.get("phone") || "").trim();
+      const service = String(data.get("service") || "").trim();
+      const message = String(data.get("message") || "").trim();
+
+      const subject = "Project Enquiry - S & F Engineering";
+      const body = [
+        "Dear S & F Engineering Team,",
+        "",
+        "I would like to enquire about your services. Please find my details below.",
+        "",
+        "𝗖𝗢𝗡𝗧𝗔𝗖𝗧 𝗗𝗘𝗧𝗔𝗜𝗟𝗦:",
+        "• 𝗡𝗔𝗠𝗘: " + name,
+        ...(company ? ["• 𝗖𝗢𝗠𝗣𝗔𝗡𝗬: " + company] : []),
+        "• 𝗣𝗛𝗢𝗡𝗘: " + phone,
+        "",
+        "𝗣𝗥𝗢𝗝𝗘𝗖𝗧 𝗥𝗘𝗤𝗨𝗜𝗥𝗘𝗠𝗘𝗡𝗧𝗦:",
+        "• 𝗦𝗘𝗥𝗩𝗜𝗖𝗘: " + service,
+        "• 𝗣𝗥𝗢𝗝𝗘𝗖𝗧 𝗗𝗘𝗧𝗔𝗜𝗟𝗦: " + message,
+        "",
+        "Please let me know the next steps and if any further information is required.",
+        "",
+        "Kind regards,",
+        name,
+      ].join("\n");
+
+      return { recipient: "sfengineering22@gmail.com", subject, body };
+    }
+
+    function makeMailto(email) {
+      return (
+        "mailto:" +
+        email.recipient +
+        "?subject=" +
+        encodeURIComponent(email.subject || "") +
+        "&body=" +
+        encodeURIComponent(email.body || "")
+      );
+    }
+
+    function makeGmailWeb(email) {
+      return (
+        "https://mail.google.com/mail/?view=cm&fs=1" +
+        "&to=" +
+        encodeURIComponent(email.recipient) +
+        "&su=" +
+        encodeURIComponent(email.subject || "") +
+        "&body=" +
+        encodeURIComponent(email.body || "")
+      );
+    }
+
+    enquiryForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      if (!enquiryForm.reportValidity()) return;
+
+      const email = buildEnquiryEmail();
+
+      if (isMobileDevice()) {
+        // Mobile browsers can hand mailto links to the installed email app.
+        // Use same-tab navigation for better compatibility on mobile.
+        window.location.href = makeMailto(email);
+      } else {
+        // Desktop: open Gmail compose directly in a new tab.
+        window.open(makeGmailWeb(email), "_blank");
+      }
+    });
+
+    if (contactEmailLink) {
+      contactEmailLink.addEventListener("click", function (event) {
+        if (!isMobileDevice()) {
+          event.preventDefault();
+          const email = {
+            recipient: "sfengineering22@gmail.com",
+            subject: "",
+            body: "",
+          };
+          window.open(makeGmailWeb(email), "_blank");
+        }
+        // On mobile, allow the mailto link to open the configured mail app.
+      });
+    }
+  </script>
+</body>
+
+</html>
